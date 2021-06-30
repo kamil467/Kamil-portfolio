@@ -1,4 +1,4 @@
-# Kamil-portfolio
+# Kamil's portfolio
 
 Firebase hosted url :  <a href='https://kamildottec.web.app/' target='_blank'>
 This is Kamil's personal portfolio website

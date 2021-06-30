@@ -1,4 +1,6 @@
 # Kamil-portfolio
+
+Firebase hosted url : https://kamildottec.web.app/
 This is Kamil's personal portfolio website
 # Technology Stack
 1. Ionic 5

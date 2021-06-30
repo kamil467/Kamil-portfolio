@@ -8,5 +8,7 @@ This is Kamil's personal portfolio website
 3. Google Firebase
 5. Angular Material Design
 
+  # GitHub-Firebase deployment workflow has been enabled. 
+  
 # The application can be easily configured as PWA in future if required.
 # We have an option to convert the web app as Android app or IOS hybrid application through cordova or capacitor

@@ -1,0 +1,44 @@
+ion-header ion-toolbar
+{
+    --background:var(--ion-color-deepteal);
+     --color:var(--ion-color-light);
+}
+mat-divider
+{
+    border:solid   #033E3E ;
+   
+}
+
+ion-content
+{
+    --background:#CFECEC;
+}
+
+.main-card {
+
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin: 12px;
+    overflow: hidden;
+    ion-col {
+      display: flex;
+      justify-content: center;
+      padding: 4px;
+    }
+    ion-card {
+     
+      margin-bottom: 12px;
+      margin-top: 12px;
+      width: 100%;
+    }
+    
+  }
+$breakpoint-tablet: 768px;
+@media (max-width: $breakpoint-tablet) {
+   
+    ion-grid{
+  
+        --ion-grid-width:100%;
+  }
+}

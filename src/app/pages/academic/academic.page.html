@@ -1,0 +1,127 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Kamil's Education Qualification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-toolbar>
+   
+    <ion-segment (ionChange)="segmentChanged($event)" value="vit">
+      <ion-segment-button value="vit" color="light">
+        Graduation 
+      </ion-segment-button>
+      <ion-segment-button value="hsec">
+        Higher Secondary (+2)
+      </ion-segment-button>
+      <ion-segment-button value="sslc">
+        SSLC
+      </ion-segment-button>
+ </ion-segment>
+</ion-toolbar>
+
+
+
+  <ion-grid >
+    <ion-row>
+      <ion-col  >
+   <div  [ngSwitch]="type">
+
+      
+        <ion-card *ngSwitchCase="'sslc'">
+          <ion-card-header>
+            <ion-card-subtitle>Panaikulam Government School</ion-card-subtitle>
+            <ion-card-title>SSLC |  2008 - 2009 </ion-card-title>
+          </ion-card-header>
+      
+          <ion-card-content>
+      
+            <ion-img class="img" src="../../../assets/school.jpg"  ></ion-img>
+            
+            <mat-table [dataSource]="dataSource" mat-table class="mat-elevation-z8">
+              <ng-container matColumnDef="name">
+                <mat-header-cell mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+                <mat-cell mat-cell *matCellDef="let element"> <strong>{{element.name}} </strong></mat-cell>
+              </ng-container>
+            
+              <ng-container matColumnDef="content">
+                <mat-header-cell mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+                <mat-cell mat-cell *matCellDef="let element"> {{element.content}} </mat-cell>
+              </ng-container>
+
+
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+
+
+          </ion-card-content>
+        </ion-card>
+        <ion-card *ngSwitchCase="'hsec'">
+          <ion-card-header>
+            <ion-card-subtitle>Panaikulam Government School</ion-card-subtitle>
+            <ion-card-title>+2 |  2010 - 2011 </ion-card-title>
+          </ion-card-header>
+      
+          <ion-card-content>
+      
+            <ion-img class="img" src="../../../assets/school.jpg"  ></ion-img>
+            
+            <mat-table [dataSource]="hsec_dataSource" mat-table class="mat-elevation-z8">
+              <ng-container matColumnDef="name">
+                <mat-header-cell mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+                <mat-cell mat-cell *matCellDef="let element"> <strong>{{element.name}} </strong></mat-cell>
+              </ng-container>
+            
+              <ng-container matColumnDef="content">
+                <mat-header-cell mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+                <mat-cell mat-cell *matCellDef="let element"> {{element.content}} </mat-cell>
+              </ng-container>
+
+
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+
+
+          </ion-card-content>
+        </ion-card>
+        <ion-card *ngSwitchCase="'vit'">
+         <ion-card-header>
+           <ion-card-subtitle>VIT University,Vellore</ion-card-subtitle>
+           <ion-card-title>B.Tech in IT | 2011 - 2015 </ion-card-title>
+         </ion-card-header>
+     
+         <ion-card-content>
+     
+           <ion-img class="img" src="../../../assets/vit.jpeg" ></ion-img>
+           <mat-table [dataSource]="steria_dataSource" mat-table class="mat-elevation-z8">
+             <ng-container matColumnDef="name">
+               <mat-header-cell mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+               <mat-cell mat-cell *matCellDef="let element"> <strong>{{element.name}} </strong> </mat-cell>
+             </ng-container>
+           
+             <ng-container matColumnDef="content">
+               <mat-header-cell mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+               <mat-cell mat-cell *matCellDef="let element"> {{element.content}} </mat-cell>
+             </ng-container>
+ 
+ 
+             <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+             <mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></mat-row>
+           </mat-table>
+         </ion-card-content>
+       </ion-card>
+      
+
+
+      </div>
+    </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

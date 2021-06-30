@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">Kamil's Experience</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+   
+      <ion-col >
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle>Infosys</ion-card-subtitle>
+            <ion-card-title>Technology Analysts |  2015 - 2019 </ion-card-title>
+          </ion-card-header>
+      
+          <ion-card-content>
+      
+            <ion-img class="img" src="../../../assets/infy.jpg"  ></ion-img>
+            
+            <mat-table [dataSource]="dataSource" mat-table class="mat-elevation-z8">
+              <ng-container matColumnDef="name">
+                <mat-header-cell mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+                <mat-cell mat-cell *matCellDef="let element"> <strong>{{element.name}} </strong></mat-cell>
+              </ng-container>
+            
+              <ng-container matColumnDef="content">
+                <mat-header-cell mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+                <mat-cell mat-cell *matCellDef="let element"> {{element.content}} </mat-cell>
+              </ng-container>
+
+
+              <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+              <mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></mat-row>
+            </mat-table>
+
+
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col >
+       <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>Sopra Steria</ion-card-subtitle>
+          <ion-card-title>Senior Software Engineer | 2019 - Present </ion-card-title>
+        </ion-card-header>
+    
+        <ion-card-content>
+    
+          <ion-img class="img" src="../../../assets/ssg.jpg" ></ion-img>
+          <mat-table [dataSource]="steria_dataSource" mat-table class="mat-elevation-z8">
+            <ng-container matColumnDef="name">
+              <mat-header-cell mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+              <mat-cell mat-cell *matCellDef="let element"> <strong>{{element.name}} </strong> </mat-cell>
+            </ng-container>
+          
+            <ng-container matColumnDef="content">
+              <mat-header-cell mat-header-cell *matHeaderCellDef>  </mat-header-cell>
+              <mat-cell mat-cell *matCellDef="let element"> {{element.content}} </mat-cell>
+            </ng-container>
+
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row matRipple *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+        </ion-card-content>
+      </ion-card>
+      </ion-col>
+      
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

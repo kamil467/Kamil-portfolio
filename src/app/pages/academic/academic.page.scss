@@ -1,0 +1,21 @@
+ion-header ion-toolbar
+{
+    --background:var(--ion-color-deepteal);
+     --color:var(--ion-color-light);
+}
+
+ion-segment ion-segment-button
+{
+    --color:var(--ion-color-deepteal);
+}
+ion-segment-button
+  {
+      --background-checked:var(--ion-color-deepteal);
+      --color-hover:var(--ion-color-deepteal);
+      --color-checked: var(--ion-color-light);
+  }
+
+  ion-content
+{
+    --background:#CFECEC;
+}
